@@ -6,8 +6,7 @@
 <title>Harsh Yadav | Elite Developer Portfolio</title>
 
 <!-- SEO -->
-<meta name="description" content="Harsh Yadav — AI/ML Engineer, .NET Developer, DevOps Enthusiast. Building intelligent, scalable, future-ready systems." />
-<meta name="keywords" content="Harsh Yadav, AI Engineer, ML Engineer, .NET Developer, DevOps, GitHub Portfolio" />
+<meta name="description" content="Harsh Yadav — AI/ML Engineer, .NET Developer, DevOps Enthusiast. Live GitHub repositories portfolio." />
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
@@ -36,7 +35,7 @@ transition: all .4s ease;
 }
 .card-hover:hover {
 transform: translateY(-10px) scale(1.03);
-box-shadow: 0 0 50px rgba(140,90,255,0.5);
+box-shadow: 0 0 50px rgba(140,90,255,0.45);
 }
 .gradient-text {
 background: linear-gradient(90deg, #a78bfa, #38bdf8);
@@ -61,11 +60,11 @@ Building intelligent systems, scalable applications, and clean code.
 <div class="flex flex-wrap justify-center gap-6">
 <a href="https://github.com/harsh-hy" target="_blank"
 class="px-8 py-4 rounded-xl glass glow font-semibold">
-<i class="fab fa-github mr-2"></i> View GitHub
+<i class="fab fa-github mr-2"></i> GitHub Profile
 </a>
-<a href="#projects"
+<a href="#repositories"
 class="px-8 py-4 rounded-xl border border-purple-400/40 hover:bg-purple-500/10 font-semibold">
-Explore Projects
+View Repositories
 </a>
 </div>
 </div>
@@ -77,57 +76,36 @@ Explore Projects
 <div class="grid md:grid-cols-3 gap-8">
 <div class="glass p-8 rounded-2xl card-hover">
 <i class="fas fa-code text-3xl text-purple-400 mb-4"></i>
-<h3 class="text-xl font-semibold mb-2">.NET & C#</h3>
-<p>Enterprise-grade backend systems, clean architecture, scalable APIs.</p>
+<h3 class="text-xl font-semibold mb-2">C# & .NET</h3>
+<p>Enterprise-level backend systems, APIs, clean architecture.</p>
 </div>
 <div class="glass p-8 rounded-2xl card-hover">
 <i class="fas fa-brain text-3xl text-blue-400 mb-4"></i>
 <h3 class="text-xl font-semibold mb-2">AI / ML & NLP</h3>
-<p>Deep learning, transformers, NLP, model optimization & deployment.</p>
+<p>Deep learning, transformers, attention models, research work.</p>
 </div>
 <div class="glass p-8 rounded-2xl card-hover">
 <i class="fas fa-rocket text-3xl text-indigo-400 mb-4"></i>
 <h3 class="text-xl font-semibold mb-2">DevOps</h3>
-<p>Docker, Jenkins, CI/CD pipelines, production-ready automation.</p>
+<p>Docker, Jenkins, CI/CD pipelines, automation.</p>
 </div>
 </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-24 px-6 bg-black/30">
-<h2 class="text-4xl font-bold gradient-text text-center mb-16">Featured Repositories</h2>
-<div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+<!-- REPOSITORIES -->
+<section id="repositories" class="py-24 px-6 bg-black/30">
+<h2 class="text-4xl font-bold gradient-text text-center mb-16">
+Live GitHub Repositories
+</h2>
 
-<div class="glass p-8 rounded-2xl card-hover">
-<h3 class="text-xl font-semibold mb-2">Cartpole Q-Learning</h3>
-<p class="text-gray-400 mb-4">Reinforcement learning agent using Q-learning.</p>
-<a href="https://github.com/harsh-hy/cartpole" target="_blank" class="text-purple-400 font-semibold">
-View Repo →
-</a>
-</div>
-
-<div class="glass p-8 rounded-2xl card-hover">
-<h3 class="text-xl font-semibold mb-2">Neural Machine Translation</h3>
-<p class="text-gray-400 mb-4">Seq2Seq with Bahdanau Attention (English ↔ Hindi).</p>
-<a href="https://github.com/harsh-hy" target="_blank" class="text-purple-400 font-semibold">
-View Repo →
-</a>
-</div>
-
-<div class="glass p-8 rounded-2xl card-hover">
-<h3 class="text-xl font-semibold mb-2">CI/CD DevOps Pipeline</h3>
-<p class="text-gray-400 mb-4">Docker + Jenkins automated deployment pipeline.</p>
-<a href="https://github.com/harsh-hy" target="_blank" class="text-purple-400 font-semibold">
-View Repo →
-</a>
-</div>
-
+<div id="repo-container" class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+<!-- JS injects repos here -->
 </div>
 
 <div class="text-center mt-16">
 <a href="https://github.com/harsh-hy?tab=repositories" target="_blank"
 class="px-10 py-4 glass glow rounded-xl font-semibold">
-View All Repositories
+View on GitHub
 </a>
 </div>
 </section>
@@ -165,10 +143,37 @@ LinkedIn
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="py-6 text-center text-gray-500">
-© 2026 Harsh Yadav • Elite Developer Portfolio
+© 2026 Harsh Yadav • Auto-synced GitHub Portfolio
 </footer>
+
+<!-- GITHUB API SCRIPT -->
+<script>
+fetch("https://api.github.com/users/harsh-hy/repos?sort=updated")
+.then(res => res.json())
+.then(data => {
+const container = document.getElementById("repo-container");
+data.forEach(repo => {
+const card = document.createElement("div");
+card.className = "glass p-8 rounded-2xl card-hover";
+
+card.innerHTML = `
+<h3 class="text-xl font-semibold mb-2">${repo.name}</h3>
+<p class="text-gray-400 mb-4">${repo.description || "No description provided."}</p>
+<div class="flex justify-between text-sm text-gray-400 mb-4">
+<span>⭐ ${repo.stargazers_count}</span>
+<span>🍴 ${repo.forks_count}</span>
+<span>${repo.language || ""}</span>
+</div>
+<a href="${repo.html_url}" target="_blank"
+class="text-purple-400 font-semibold">
+View Repository →
+</a>
+`;
+container.appendChild(card);
+});
+});
+</script>
 
 </body>
 </html>
