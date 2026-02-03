@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Harsh Yadav | Elite Developer Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Yadav | Developer Portfolio</title>
 
 <!-- SEO -->
-<meta name="description" content="Harsh Yadav — AI/ML Engineer, .NET Developer, DevOps Enthusiast. Live GitHub repositories portfolio." />
+<meta name="description" content="Harsh Yadav — AI/ML Engineer, .NET Developer, DevOps Enthusiast. GitHub portfolio and repositories." />
 
-<!-- Fonts -->
+<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
 <!-- Tailwind -->
@@ -27,15 +27,12 @@ background: rgba(255,255,255,0.06);
 backdrop-filter: blur(18px);
 border: 1px solid rgba(255,255,255,0.1);
 }
-.glow {
-box-shadow: 0 0 40px rgba(120,80,255,0.35);
-}
 .card-hover {
 transition: all .4s ease;
 }
 .card-hover:hover {
 transform: translateY(-10px) scale(1.03);
-box-shadow: 0 0 50px rgba(140,90,255,0.45);
+box-shadow: 0 0 45px rgba(140,90,255,0.45);
 }
 .gradient-text {
 background: linear-gradient(90deg, #a78bfa, #38bdf8);
@@ -50,7 +47,9 @@ background: linear-gradient(90deg, #a78bfa, #38bdf8);
 <!-- HERO -->
 <section class="min-h-screen flex items-center justify-center text-center px-6">
 <div class="max-w-5xl">
-<h1 class="text-6xl md:text-7xl font-black gradient-text mb-6">Harsh Yadav</h1>
+<h1 class="text-6xl md:text-7xl font-black gradient-text mb-6">
+Harsh Yadav
+</h1>
 <h2 class="text-xl md:text-2xl text-gray-400 mb-6">
 AI/ML Engineer | .NET Developer | DevOps Enthusiast
 </h2>
@@ -59,7 +58,7 @@ Building intelligent systems, scalable applications, and clean code.
 </p>
 <div class="flex flex-wrap justify-center gap-6">
 <a href="https://github.com/harsh-hy" target="_blank"
-class="px-8 py-4 rounded-xl glass glow font-semibold">
+class="px-8 py-4 rounded-xl glass font-semibold">
 <i class="fab fa-github mr-2"></i> GitHub Profile
 </a>
 <a href="#repositories"
@@ -70,69 +69,109 @@ View Repositories
 </div>
 </section>
 
-<!-- ABOUT -->
-<section class="py-24 px-6 max-w-6xl mx-auto">
-<h2 class="text-4xl font-bold gradient-text mb-12 text-center">About Me</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="glass p-8 rounded-2xl card-hover">
-<i class="fas fa-code text-3xl text-purple-400 mb-4"></i>
-<h3 class="text-xl font-semibold mb-2">C# & .NET</h3>
-<p>Enterprise-level backend systems, APIs, clean architecture.</p>
-</div>
-<div class="glass p-8 rounded-2xl card-hover">
-<i class="fas fa-brain text-3xl text-blue-400 mb-4"></i>
-<h3 class="text-xl font-semibold mb-2">AI / ML & NLP</h3>
-<p>Deep learning, transformers, attention models, research work.</p>
-</div>
-<div class="glass p-8 rounded-2xl card-hover">
-<i class="fas fa-rocket text-3xl text-indigo-400 mb-4"></i>
-<h3 class="text-xl font-semibold mb-2">DevOps</h3>
-<p>Docker, Jenkins, CI/CD pipelines, automation.</p>
-</div>
-</div>
-</section>
-
 <!-- REPOSITORIES -->
 <section id="repositories" class="py-24 px-6 bg-black/30">
 <h2 class="text-4xl font-bold gradient-text text-center mb-16">
-Live GitHub Repositories
+Pinned Repositories
 </h2>
 
-<div id="repo-container" class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-<!-- JS injects repos here -->
+<div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+
+<!-- DotNet Training -->
+<a href="https://github.com/harsh-hy/DotNetTraining" target="_blank"
+class="glass p-8 rounded-2xl card-hover block">
+<i class="fab fa-microsoft text-4xl text-purple-400 mb-4"></i>
+<h3 class="text-xl font-semibold mb-3">DotNet Training</h3>
+<p class="text-gray-400 mb-6">
+Comprehensive .NET and C# training repository covering OOP concepts,
+console applications, and enterprise-level backend fundamentals.
+</p>
+<span class="text-purple-400 font-semibold">
+View Repository →
+</span>
+</a>
+
+<!-- SQL Training -->
+<a href="https://github.com/harsh-hy/SQL-Training" target="_blank"
+class="glass p-8 rounded-2xl card-hover block">
+<i class="fas fa-database text-4xl text-blue-400 mb-4"></i>
+<h3 class="text-xl font-semibold mb-3">SQL Training</h3>
+<p class="text-gray-400 mb-6">
+Structured SQL practice repository covering queries, joins,
+subqueries, normalization, and database design concepts.
+</p>
+<span class="text-purple-400 font-semibold">
+View Repository →
+</span>
+</a>
+
+<!-- TopBrains -->
+<a href="https://github.com/harsh-hy/TopBrains" target="_blank"
+class="glass p-8 rounded-2xl card-hover block">
+<i class="fas fa-brain text-4xl text-indigo-400 mb-4"></i>
+<h3 class="text-xl font-semibold mb-3">TopBrains</h3>
+<p class="text-gray-400 mb-6">
+Assessment and testing platform repository used for practice tests,
+logical reasoning, and evaluation-based learning modules.
+</p>
+<span class="text-purple-400 font-semibold">
+View Repository →
+</span>
+</a>
+
 </div>
 
-<div class="text-center mt-16">
+<div class="text-center mt-20">
 <a href="https://github.com/harsh-hy?tab=repositories" target="_blank"
-class="px-10 py-4 glass glow rounded-xl font-semibold">
-View on GitHub
+class="px-10 py-4 glass rounded-xl font-semibold">
+View All Repositories
 </a>
 </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ABOUT -->
 <section class="py-24 px-6 max-w-6xl mx-auto">
-<h2 class="text-4xl font-bold gradient-text text-center mb-16">Skills</h2>
-<div class="grid md:grid-cols-4 gap-6">
-<div class="glass p-6 rounded-xl text-center">C# / .NET</div>
-<div class="glass p-6 rounded-xl text-center">Python</div>
-<div class="glass p-6 rounded-xl text-center">Machine Learning</div>
-<div class="glass p-6 rounded-xl text-center">Deep Learning</div>
-<div class="glass p-6 rounded-xl text-center">TensorFlow</div>
-<div class="glass p-6 rounded-xl text-center">Docker</div>
-<div class="glass p-6 rounded-xl text-center">Jenkins</div>
-<div class="glass p-6 rounded-xl text-center">Git & GitHub</div>
+<h2 class="text-4xl font-bold gradient-text text-center mb-12">
+About Me
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+<div class="glass p-8 rounded-2xl card-hover">
+<i class="fas fa-code text-3xl text-purple-400 mb-4"></i>
+<h3 class="text-xl font-semibold mb-2">C# & .NET</h3>
+<p>Backend development, clean architecture, scalable APIs.</p>
+</div>
+
+<div class="glass p-8 rounded-2xl card-hover">
+<i class="fas fa-brain text-3xl text-blue-400 mb-4"></i>
+<h3 class="text-xl font-semibold mb-2">AI / ML & NLP</h3>
+<p>Deep learning, transformers, NLP systems, research projects.</p>
+</div>
+
+<div class="glass p-8 rounded-2xl card-hover">
+<i class="fas fa-rocket text-3xl text-indigo-400 mb-4"></i>
+<h3 class="text-xl font-semibold mb-2">DevOps</h3>
+<p>Docker, Jenkins, CI/CD pipelines, automation workflows.</p>
+</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="py-24 px-6 bg-black/30">
-<h2 class="text-4xl font-bold gradient-text text-center mb-12">Contact</h2>
+<h2 class="text-4xl font-bold gradient-text text-center mb-12">
+Contact
+</h2>
+
 <div class="max-w-xl mx-auto glass p-10 rounded-2xl text-center">
-<p class="mb-4"><i class="fas fa-envelope mr-2"></i> harshyadav02266@gmail.com</p>
+<p class="mb-4">
+<i class="fas fa-envelope mr-2"></i>
+harshyadav02266@gmail.com
+</p>
 <p class="mb-4">
 <i class="fab fa-github mr-2"></i>
-<a href="https://github.com/harsh-hy" target="_blank" class="text-purple-400">GitHub</a>
+<a href="https://github.com/harsh-hy" target="_blank" class="text-purple-400">
+GitHub
+</a>
 </p>
 <p>
 <i class="fab fa-linkedin mr-2"></i>
@@ -143,37 +182,10 @@ LinkedIn
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="py-6 text-center text-gray-500">
-© 2026 Harsh Yadav • Auto-synced GitHub Portfolio
+© 2026 Harsh Yadav • Developer Portfolio
 </footer>
-
-<!-- GITHUB API SCRIPT -->
-<script>
-fetch("https://api.github.com/users/harsh-hy/repos?sort=updated")
-.then(res => res.json())
-.then(data => {
-const container = document.getElementById("repo-container");
-data.forEach(repo => {
-const card = document.createElement("div");
-card.className = "glass p-8 rounded-2xl card-hover";
-
-card.innerHTML = `
-<h3 class="text-xl font-semibold mb-2">${repo.name}</h3>
-<p class="text-gray-400 mb-4">${repo.description || "No description provided."}</p>
-<div class="flex justify-between text-sm text-gray-400 mb-4">
-<span>⭐ ${repo.stargazers_count}</span>
-<span>🍴 ${repo.forks_count}</span>
-<span>${repo.language || ""}</span>
-</div>
-<a href="${repo.html_url}" target="_blank"
-class="text-purple-400 font-semibold">
-View Repository →
-</a>
-`;
-container.appendChild(card);
-});
-});
-</script>
 
 </body>
 </html>
