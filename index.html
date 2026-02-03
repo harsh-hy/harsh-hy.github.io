@@ -5,16 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Harsh Yadav | Developer Portfolio</title>
 
-<!-- SEO -->
-<meta name="description" content="Harsh Yadav — AI/ML Engineer, .NET Developer, DevOps Enthusiast. GitHub portfolio and repositories." />
+<meta name="description" content="Harsh Yadav — AI/ML Engineer, .NET Developer, DevOps Enthusiast." />
 
-<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
@@ -24,14 +18,15 @@ background: radial-gradient(circle at top, #0f0c29, #090912 70%);
 }
 .glass {
 background: rgba(255,255,255,0.06);
-backdrop-filter: blur(18px);
-border: 1px solid rgba(255,255,255,0.1);
+backdrop-filter: blur(16px);
+border: 1px solid rgba(255,255,255,0.12);
 }
-.card-hover {
-transition: all .4s ease;
+.card {
+transition: all .35s ease;
+cursor: pointer;
 }
-.card-hover:hover {
-transform: translateY(-10px) scale(1.03);
+.card:hover {
+transform: translateY(-8px);
 box-shadow: 0 0 45px rgba(140,90,255,0.45);
 }
 .gradient-text {
@@ -42,7 +37,7 @@ background: linear-gradient(90deg, #a78bfa, #38bdf8);
 </style>
 </head>
 
-<body class="text-gray-200 overflow-x-hidden">
+<body class="text-gray-200">
 
 <!-- HERO -->
 <section class="min-h-screen flex items-center justify-center text-center px-6">
@@ -56,13 +51,13 @@ AI/ML Engineer | .NET Developer | DevOps Enthusiast
 <p class="text-gray-300 max-w-2xl mx-auto mb-10">
 Building intelligent systems, scalable applications, and clean code.
 </p>
-<div class="flex flex-wrap justify-center gap-6">
+<div class="flex justify-center gap-6">
 <a href="https://github.com/harsh-hy" target="_blank"
-class="px-8 py-4 rounded-xl glass font-semibold">
+class="px-8 py-4 glass rounded-xl font-semibold">
 <i class="fab fa-github mr-2"></i> GitHub Profile
 </a>
 <a href="#repositories"
-class="px-8 py-4 rounded-xl border border-purple-400/40 hover:bg-purple-500/10 font-semibold">
+class="px-8 py-4 border border-purple-400/40 rounded-xl font-semibold">
 View Repositories
 </a>
 </div>
@@ -77,47 +72,47 @@ Pinned Repositories
 
 <div class="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
 
-<!-- DotNet Training -->
-<a href="https://github.com/harsh-hy/DotNetTraining" target="_blank"
-class="glass p-8 rounded-2xl card-hover block">
+<!-- DotNetTraining -->
+<div class="glass p-8 rounded-2xl card"
+onclick="window.open('https://github.com/harsh-hy/DotNetTraining','_blank')">
 <i class="fab fa-microsoft text-4xl text-purple-400 mb-4"></i>
 <h3 class="text-xl font-semibold mb-3">DotNet Training</h3>
 <p class="text-gray-400 mb-6">
-Comprehensive .NET and C# training repository covering OOP concepts,
-console applications, and enterprise-level backend fundamentals.
+Complete .NET and C# training repository covering OOP, console apps,
+and backend fundamentals.
 </p>
-<span class="text-purple-400 font-semibold">
+<button class="text-purple-400 font-semibold">
 View Repository →
-</span>
-</a>
+</button>
+</div>
 
 <!-- SQL Training -->
-<a href="https://github.com/harsh-hy/SQL-Training" target="_blank"
-class="glass p-8 rounded-2xl card-hover block">
+<div class="glass p-8 rounded-2xl card"
+onclick="window.open('https://github.com/harsh-hy/SQL-Training','_blank')">
 <i class="fas fa-database text-4xl text-blue-400 mb-4"></i>
 <h3 class="text-xl font-semibold mb-3">SQL Training</h3>
 <p class="text-gray-400 mb-6">
-Structured SQL practice repository covering queries, joins,
-subqueries, normalization, and database design concepts.
+SQL queries, joins, subqueries, normalization, and database design
+practice repository.
 </p>
-<span class="text-purple-400 font-semibold">
+<button class="text-purple-400 font-semibold">
 View Repository →
-</span>
-</a>
+</button>
+</div>
 
 <!-- TopBrains -->
-<a href="https://github.com/harsh-hy/TopBrains" target="_blank"
-class="glass p-8 rounded-2xl card-hover block">
+<div class="glass p-8 rounded-2xl card"
+onclick="window.open('https://github.com/harsh-hy/TopBrains','_blank')">
 <i class="fas fa-brain text-4xl text-indigo-400 mb-4"></i>
 <h3 class="text-xl font-semibold mb-3">TopBrains</h3>
 <p class="text-gray-400 mb-6">
-Assessment and testing platform repository used for practice tests,
-logical reasoning, and evaluation-based learning modules.
+Testing and assessment platform repository for exams, reasoning,
+and evaluation-based learning.
 </p>
-<span class="text-purple-400 font-semibold">
+<button class="text-purple-400 font-semibold">
 View Repository →
-</span>
-</a>
+</button>
+</div>
 
 </div>
 
@@ -136,22 +131,17 @@ About Me
 </h2>
 
 <div class="grid md:grid-cols-3 gap-8">
-<div class="glass p-8 rounded-2xl card-hover">
-<i class="fas fa-code text-3xl text-purple-400 mb-4"></i>
+<div class="glass p-8 rounded-2xl card">
 <h3 class="text-xl font-semibold mb-2">C# & .NET</h3>
-<p>Backend development, clean architecture, scalable APIs.</p>
+<p>Backend systems, APIs, clean architecture.</p>
 </div>
-
-<div class="glass p-8 rounded-2xl card-hover">
-<i class="fas fa-brain text-3xl text-blue-400 mb-4"></i>
-<h3 class="text-xl font-semibold mb-2">AI / ML & NLP</h3>
-<p>Deep learning, transformers, NLP systems, research projects.</p>
+<div class="glass p-8 rounded-2xl card">
+<h3 class="text-xl font-semibold mb-2">AI / ML</h3>
+<p>Deep learning, NLP, research-driven projects.</p>
 </div>
-
-<div class="glass p-8 rounded-2xl card-hover">
-<i class="fas fa-rocket text-3xl text-indigo-400 mb-4"></i>
+<div class="glass p-8 rounded-2xl card">
 <h3 class="text-xl font-semibold mb-2">DevOps</h3>
-<p>Docker, Jenkins, CI/CD pipelines, automation workflows.</p>
+<p>Docker, Jenkins, CI/CD pipelines.</p>
 </div>
 </div>
 </section>
@@ -161,28 +151,17 @@ About Me
 <h2 class="text-4xl font-bold gradient-text text-center mb-12">
 Contact
 </h2>
-
 <div class="max-w-xl mx-auto glass p-10 rounded-2xl text-center">
-<p class="mb-4">
-<i class="fas fa-envelope mr-2"></i>
-harshyadav02266@gmail.com
-</p>
-<p class="mb-4">
-<i class="fab fa-github mr-2"></i>
-<a href="https://github.com/harsh-hy" target="_blank" class="text-purple-400">
-GitHub
-</a>
+<p class="mb-3">📧 harshyadav02266@gmail.com</p>
+<p class="mb-3">
+<a href="https://github.com/harsh-hy" target="_blank" class="text-purple-400">GitHub</a>
 </p>
 <p>
-<i class="fab fa-linkedin mr-2"></i>
-<a href="https://www.linkedin.com/in/harshyadav-hy/" target="_blank" class="text-blue-400">
-LinkedIn
-</a>
+<a href="https://www.linkedin.com/in/harshyadav-hy/" target="_blank" class="text-blue-400">LinkedIn</a>
 </p>
 </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="py-6 text-center text-gray-500">
 © 2026 Harsh Yadav • Developer Portfolio
 </footer>
